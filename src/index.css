@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --bg-maroon: #A80026;
+    --bg-container: #050505;
+    --accent-neon: #FF003C;
+    --secondary-maroon: #8B001F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #ffffff;
+    background-color: #A80026;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Outer Maroon Canvas Gradient matching Reference */
+.maroon-canvas-bg {
+  background-color: #A80026;
+  background-image: 
+    radial-gradient(circle at 50% 25%, #be042e 0%, #a80026 50%, #75001a 100%),
+    radial-gradient(ellipse at 80% 80%, rgba(139, 0, 31, 0.6) 0%, transparent 60%);
+}
+
+/* 3D Neon Ring Effect */
+.neon-ring-3d {
+  border-color: #FF003C;
+  box-shadow: 
+    0 0 25px #FF003C,
+    0 0 50px rgba(255, 0, 60, 0.7),
+    0 0 100px rgba(255, 0, 60, 0.4),
+    inset 0 0 25px rgba(255, 0, 60, 0.6);
+}
+
+.neon-ring-subtle {
+  border-color: rgba(255, 0, 60, 0.85);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 60, 0.6),
+    0 0 45px rgba(255, 0, 60, 0.35);
+}
+
+/* 3D Card Perspective */
+.card-3d-perspective {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Glow Helpers */
+.text-glow-neon {
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.75);
+}
+
+.shadow-neon-button {
+  box-shadow: 0 0 25px rgba(255, 0, 60, 0.65), 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-neon-button:hover {
+  box-shadow: 0 0 35px rgba(255, 0, 60, 0.9), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Custom Scrollbar for smooth long page */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B001F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF003C;
+}
